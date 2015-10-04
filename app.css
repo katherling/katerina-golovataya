@@ -1,0 +1,195 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Roboto+Slab&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic);
+
+* {
+    transition: .5s;
+}
+
+body {
+    
+    background: url('background.JPG') no-repeat center fixed;
+    
+    background-size: cover;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+}
+
+span {
+    font-style: italic;
+}
+
+.main.container {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+}
+
+.aligner {
+    display: block;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.aligner:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -.25em;
+}
+
+.aligner > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.info.container {
+    position: relative;
+    display: inline-block;
+    height: 550px;
+    width: 70%;
+    vertical-align: middle;
+    border: 15px solid rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.container > .dimmer {
+    float: left;
+    position: absolute;
+    display: block;
+    width: 100%;
+    min-height: 100%;
+    border-radius: 10px;
+    background: black;
+    background-color: rgba(0, 0, 0, 0.3);
+    /*background: url('pattern.png') left top repeat;*/
+}
+
+.language.menu {
+    text-align: right;
+    padding-right: 100px;
+}
+
+.language.menu a {
+    font-family: "Roboto Slab", serif;
+    display: inline-block;
+    padding: 25px 35px;
+    color: #AAA;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.language.menu a.language:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.language.menu a.active,
+.language.menu a.title {
+    color: white;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 1);
+}
+
+.language.menu a.title {
+    padding: 21px 35px;
+    font-size: 24px;
+    float: left;
+}
+
+.separator {
+    height: 1px;
+    background: rgba(0, 0, 0, 0.30);
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.95);
+}
+
+.white.separator {
+    background: rgba(255, 255, 255, 0.30);
+    box-shadow: 0px 0px 6px rgba(255, 2555, 255, 0.95);
+}
+
+.photo {
+    padding: 40px 70px;
+    display: inline-block;
+}
+
+.photo > .photo-container {
+    border-radius: 50%;
+    position: relative;
+}
+
+.photo > .photo-container > img {
+    border-radius: 50%;
+    width: 160px;
+    border: 9px solid #DDD;
+}
+
+.photo > .photo-container:after {
+    content:'';
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #DDD;
+    position: absolute;
+    top:45%;
+    right: -9px;
+    text-shadow:none;
+}
+
+.text {
+    font-family: "Roboto Condensed", sans-serif;
+    color: #DDD;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 1);
+    width: 70%;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.contacts {
+    font-family: "Roboto Condensed", sans-serif;
+    text-align: center;
+    font-size: 20px;
+    margin: 0 20%;
+    color: #999;
+}
+
+.contacts > .row > div {
+    display: inline-block;
+    padding: 5px 10px;
+    width: 40%;
+}
+
+.contacts > .row > div:first-child {
+    text-align: right;
+}
+.contacts > .row > div:last-child {
+    text-align: left;
+}
+
+.contacts a {
+    color: white;
+    text-decoration: none;
+}
+
+@media only screen and (min-width : 768px) and (max-width: 1600px) {
+    .info.container {
+        width: 90%;
+    }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 768px) {
+    .aligner:before {
+        display: none;
+    }
+
+    .info.container {
+        width: 100%;
+        height: 100%;
+    }
+}
